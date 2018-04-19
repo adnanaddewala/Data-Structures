@@ -1,0 +1,58 @@
+
+class Node(object):
+    
+    def __init__(self, data, next_node):
+        self.data = data
+        self.next_node = next_node
+        
+    def getdata(self):
+        return self.data
+    
+    def setdata(self,val):
+        self.data = val
+        
+    def set_nextdata(self, nextval):
+        self.next_node = nextval
+        
+    def get_nextdata(self):
+        return self.next_node    
+
+class linkedlist():
+    
+    def __init__(self,head= None):
+        self.head = head
+        self.size = 0
+        
+    def sizell(self):
+        return self.size
+    
+    def addnodell(self,data):
+        newnode = Node(data, self.head)
+        self.head = newnode
+        self.size +=1
+        return True
+    def printNode(self):
+        curr = self.head
+        while curr:
+            print(curr.data)
+            curr = curr.get_nextdata()
+    def searchnode(self,data):
+        curr = self.head
+        while curr and self.head =! None:
+            if curr == data:
+                print("Node found ")
+            else:
+                curr.get_nextdata()
+
+        
+#%% Test List
+
+b = Node(2,4)
+
+t = linkedlist()
+t.addnodell(32)
+t.addnodell(445)
+t.addnodell(632)
+t.printNode()
+t.searchnode(32)
+
